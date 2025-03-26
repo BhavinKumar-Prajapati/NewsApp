@@ -15,7 +15,7 @@ class NewRepo {
       return  flow{
             emit(ApiState(loading = true))
             try {
-             val response : ApiResponse =  apiInstance.getHeadLines(country = country)
+                val response : ApiResponse =  apiInstance.getHeadLines(country = country)
                 emit(ApiState(data =  response))
             }catch (e: HttpException)
             {
